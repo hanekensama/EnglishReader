@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EnglishReader
 {
@@ -19,8 +20,8 @@ namespace EnglishReader
 
         public bool checkFileType(string filePath)
         {
-            //読み込みを許可するファイルの拡張子を指定 (app.config に定義した方が本当は便利。)
-            string[] extnArray = { "txt", "cs", "vb", "htm", "html", "xml", "csv", "js", "vbs", "wsh" };
+            //読み込みを許可するファイルの拡張子
+            string[] extnArray = { "txt" };
             foreach (string extn in extnArray)
             {
                 int dotLen = extn.Length;
@@ -46,4 +47,28 @@ namespace EnglishReader
                 return false;
             }
         }
+
+        public string OpenWithDialog()
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "テキストファイル(*.txt)|*.txt|全てのファイル(*.*)|*.*";
+            ofd.FilterIndex = 1;
+            ofd.Title = "ファイルを開く";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                return ofd.FileName;
+            }
+            else
+            {
+                MessageBox.Show(
+                    "ファイルを開けませんでした",
+                    "エラー",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return "";
+            }
+        }
     }
+    
+}
