@@ -39,6 +39,7 @@
             this.labelFont = new System.Windows.Forms.Label();
             this.inputFontSize = new System.Windows.Forms.NumericUpDown();
             this.buttonReset = new System.Windows.Forms.Button();
+            this.checkBox = new System.Windows.Forms.CheckBox();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputWPM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputFontSize)).BeginInit();
@@ -52,7 +53,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip.Size = new System.Drawing.Size(492, 24);
+            this.menuStrip.Size = new System.Drawing.Size(578, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -96,7 +97,7 @@
             this.richTextBox.ReadOnly = true;
             this.richTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox.ShortcutsEnabled = false;
-            this.richTextBox.Size = new System.Drawing.Size(493, 295);
+            this.richTextBox.Size = new System.Drawing.Size(579, 295);
             this.richTextBox.TabIndex = 1;
             this.richTextBox.Text = "";
             this.richTextBox.TextChanged += new System.EventHandler(this.richTextBox_TextChanged);
@@ -144,7 +145,7 @@
             // 
             this.buttonStartStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStartStop.Font = new System.Drawing.Font("MS UI Gothic", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonStartStop.Location = new System.Drawing.Point(404, 315);
+            this.buttonStartStop.Location = new System.Drawing.Point(490, 315);
             this.buttonStartStop.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.buttonStartStop.Name = "buttonStartStop";
             this.buttonStartStop.Size = new System.Drawing.Size(70, 30);
@@ -191,7 +192,7 @@
             // 
             this.buttonReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonReset.Font = new System.Drawing.Font("MS UI Gothic", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonReset.Location = new System.Drawing.Point(323, 315);
+            this.buttonReset.Location = new System.Drawing.Point(409, 315);
             this.buttonReset.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(70, 30);
@@ -200,12 +201,25 @@
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
+            // checkBox
+            // 
+            this.checkBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBox.AutoSize = true;
+            this.checkBox.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBox.Location = new System.Drawing.Point(264, 321);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(115, 19);
+            this.checkBox.TabIndex = 8;
+            this.checkBox.Text = "Difficult Mode";
+            this.checkBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 344);
+            this.ClientSize = new System.Drawing.Size(578, 344);
+            this.Controls.Add(this.checkBox);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.labelFont);
             this.Controls.Add(this.inputFontSize);
@@ -242,6 +256,7 @@
         private System.Windows.Forms.Label labelFont;
         private System.Windows.Forms.NumericUpDown inputFontSize;
         private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.CheckBox checkBox;
     }
 }
 

@@ -354,6 +354,7 @@ namespace EnglishReader
             {
                 wpm = form.inputWPM.Value;
                 int interval = (int)(60 / (double)wpm * 1000);
+                form.richTextBox.Select(0, 0);
                 timer.Tick += new EventHandler(Highlight);
                 timer.Interval = interval;
                 timer.Start();
@@ -413,7 +414,10 @@ namespace EnglishReader
             }
             private void ChangeColor(int first, int last)
             {
-                form.richTextBox.SelectionColor = Color.Black;
+                if (form.checkBox.Checked)
+                    form.richTextBox.SelectionColor = Color.White;
+                else
+                    form.richTextBox.SelectionColor = Color.Black;
                 form.richTextBox.SelectionStart = first;
                 form.richTextBox.SelectionLength = (last - first + 1);
                 form.richTextBox.SelectionColor = Color.Red;
